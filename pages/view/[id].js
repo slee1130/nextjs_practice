@@ -8,11 +8,12 @@ const Post = () => {
   const { id } = router.query;
   const [item, setItem] = useState({});
 
-  const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}`;
+  const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
 
   function getData() {
     Axios.get(API_URL).then((res) => {
       console.log(res.data);
+      setItem(res.data);
     });
   }
 
