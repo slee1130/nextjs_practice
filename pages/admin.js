@@ -12,7 +12,7 @@ export default function Admin() {
       if (res.status === 200 && res.data.name) {
         setIsLogin(true);
       } else {
-        router.push("/");
+        router.push("/login");
       }
     });
   }
