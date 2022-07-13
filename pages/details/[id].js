@@ -1,5 +1,8 @@
 import Axios from "axios";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { Loader } from "semantic-ui-react";
 import Item from "../../src/components/Item";
 
 const Post = ({ item, name }) => {
@@ -21,7 +24,19 @@ const Post = ({ item, name }) => {
 
 export default Post;
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      ,
+      { params: { id: "730" } },
+      { params: { id: "729" } },
+      { params: { id: "740" } },
+    ],
+    fallback: true,
+  };
+}
+
+export async function getStaticProps(context) {
   const id = context.params.id;
   const apiUrl = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
   const res = await Axios.get(apiUrl);
