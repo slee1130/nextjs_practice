@@ -6,6 +6,8 @@
 .pnp.js
 .eslintrc.json
 next.config.js
+jest.config.js
+.babelrc
 
 # testing
 /coverage
