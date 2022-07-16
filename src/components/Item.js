@@ -1,7 +1,10 @@
 import { Button, Header } from "semantic-ui-react";
 import styles from "../components/Item.module.css";
 
-export default function Item({ item }) {
+export default function Item(props) {
+  const { item } = props;
+  if (!item) return null;
+
   const { image_link, name, price, description, category, product_type } = item;
   return (
     <>
@@ -16,7 +19,7 @@ export default function Item({ item }) {
       </div>
       <span className={styles.txt_info}>
         {category ? `${category}/` : ""}
-        {product_type}
+        hi{product_type}
       </span>
       <Button color="orange">Buy</Button>
       <Header as="h3">Description</Header>

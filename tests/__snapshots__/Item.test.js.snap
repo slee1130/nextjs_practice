@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check we get all items from items 정상적으로 props를 렌더링 하는지 확인 1`] = `
+<div>
+  <div
+    class="wrap"
+  >
+    <div
+      class="img_item"
+    >
+      <img
+        alt="서울우유"
+        src="/test"
+      />
+    </div>
+  </div>
+  <div
+    class="info_item"
+  >
+    <strong
+      class="tit_item"
+    >
+      서울우유
+    </strong>
+    <strong
+      class="num_price"
+    >
+      $
+      300
+    </strong>
+  </div>
+  <span
+    class="txt_info"
+  >
+    유제품이다/
+    유제품
+  </span>
+  <button
+    class="ui orange button"
+  >
+    Buy
+  </button>
+  <h3
+    class="ui header"
+  >
+    Description
+  </h3>
+  <p
+    style="padding-bottom: 20px; font-size: 18px;"
+  >
+    우유는 맛있어
+  </p>
+</div>
+`;
